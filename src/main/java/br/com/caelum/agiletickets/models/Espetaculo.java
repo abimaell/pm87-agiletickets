@@ -2,7 +2,6 @@ package br.com.caelum.agiletickets.models;
 
 import static com.google.common.collect.Lists.newArrayList;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
