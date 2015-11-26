@@ -7,6 +7,7 @@ import java.util.List;
 
 import junit.framework.Assert;
 
+import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 import org.junit.Test;
@@ -83,14 +84,14 @@ public class EspetaculoTest {
 	public void deveCriarASessaoDeUmDia() throws Exception {
 		Espetaculo espetaculo = new Espetaculo();
 		LocalDate dataInicio = new LocalDate(2015,11,25);
-		LocalDate dataFim = dataInicio.plusDays(0); 
-				//new LocalDate(2015,11,25);
+		LocalDate dataFim = dataInicio;
 		
 		LocalTime horaDaSessao = new LocalTime(22,00);
 		
 		List<Sessao> sessoesCriadas = espetaculo.criaSessoes(dataInicio, dataFim, horaDaSessao, Periodicidade.DIARIA);
 		
 		Assert.assertEquals(1, sessoesCriadas.size());
+		Assert.assertEquals(new DateTime(2015, 11, 25, 22, 00), sessoesCriadas.get(0).getInicio());
 
 	}
 	

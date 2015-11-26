@@ -90,19 +90,10 @@ public class Espetaculo {
 
 		Sessao sessao = new Sessao();
 		
-		DateTime inicioDaSessao = 
-				//new DateTime(inicio.getYear(), inicio.getMonthOfYear(), inicio.getDayOfMonth(), horario.getHourOfDay(), horario.getMinuteOfHour());
-				inicio.toDateTime(horario);
-
+		DateTime inicioDaSessao = inicio.toDateTime(horario);
 		sessao.setInicio(inicioDaSessao);
-//		sessao.setEspetaculo(this);
-//		sessao.setDuracaoEmMinutos(30);
-//		sessao.setTotalIngressos(10);
-//		sessao.setIngressosReservados(Integer.valueOf(10));
-//		sessao.setPreco(BigDecimal.valueOf(50.0));
 		
 		sessoesCriadas.add(sessao);
-		
 		
 		return sessoesCriadas;
 	}
